@@ -1,95 +1,53 @@
-{{#ember-scroll-view as |scrollView|}}
-  <div class="container">
-    <h2 class="title">ember-scroll-to</h2>
-    <p>An ember addon component for scrolling the content of the page to a specified <span class="text-red">`id`</span></p>
+{{#ember-scroll-view offsetTop=85}}
+  <div class="header-section">
+    <div class="container">
+      <h1>Scroll Progress View Demo</h1>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="container">
+      <h2 class="title">ember-scroll-progress</h2>
+      <p>An ember addon to display the progress of the page scroll.<br> Scroll the page to view this page's progress on the bottom right.</p>
 
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
+      <h3>Usage:</h3>
+      {{code-snippet name="usage.hbs" class="code-snippet"}}
+      <h3>Parameters:</h3>
+      <ul>
+        <li><b>position</b> to specify the position of the scroll progress view. Available options: `top-left`, `bottom-left`, `top-right`, `bottom-right`</li>
+        <li><b>offsetTop</b> to set the top offset based on the scroll container's top position inside the page.</li>
+      </ul>
 
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
+      <h3>Installation:</h3>
+      <ul>
+        <li>git clone this repository</li>
+        <li>cd ember-scroll-view</li>
+        <li>npm install</li>
+        <li>bower install</li>
+      </ul>
 
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
+      <h3>Running</h3>
+      <ul>
+        <li>ember serve</li>
+        <li>Visit your app at <a href="http://localhost:4200">http://localhost:4200</a>.</li>
+      </ul>
 
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
+      <h3>Running Tests</h3>
+      <ul>
+        <li>npm test (Runs `ember try:each` to test your addon against multiple Ember versions)</li>
+        <li>ember test</li>
+        <li>ember test --server</li>
+      </ul>
 
+      <h3>Building</h3>
+      <ul>
+        <li>ember build</li>
+      </ul>
 
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
-
-
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
-
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
-
-
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
-
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
-
-    <h3>Parameters:</h3>
-    <ul>
-      <li><span class="text-red">scroll_id</span> will have the 'id' value to which the page will be scrolled.</li>
-      <li><span class="text-red">afterScroll</span> it is a action which will be triggered after scroll is completed.</li>
-      <li><span class="text-red">transitionDelay</span> will have the transition time in milli seconds. Defaults to <span class="text-red">400</span>.</li>
-      <li><span class="text-red">highlightContent</span> takes a boolean value. It is used to decide whether or not to highlight the content after scrolling. Defaults to <span class="text-red">true</span>.</li>
-    </ul>
-
-    <button {{action "screenShot" target=scrollView}}>Click Here</button>
-
-    <div class="demo-container">
-      {{outlet}}
+    </div>
+  </div>
+  <div class="footer-section">
+    <div class="container">
+      <p>Developed by <a href="https://github.com/gowthamrm">@gowthamrm</a></p>
     </div>
   </div>
 {{/ember-scroll-view}}

@@ -1,8 +1,7 @@
-{{#if imageUrl}}
-  <div class="preview-container">
-    <img src={{imageUrl}} />
-  </div>
-{{/if}}
+<div id="em-preview-container" class="em-preview-container">
+  <div id="em-preview-selector" class="em-preview-selector"></div>
+  {{#if imageUrl}}<img src={{imageUrl}} />{{/if}}
+</div>
 <div id="scroll-view-container">
   {{yield this}}
 </div>
