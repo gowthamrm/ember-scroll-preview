@@ -4,6 +4,21 @@ import layout from '../templates/components/ember-scroll-view';
 const { Component, run } = Ember;
 const html2canvas = window.html2canvas;
 
+const availPositions = {
+  'top': { top: 0, left: 0 },
+  'left': { top: 0, left: 0 },
+  'top-left': { top: 0, left: 0 },
+  'left-top': { top: 0, left: 0 },
+  'bottom': { bottom: 0, left: 0 },
+  'bottom-left': { bottom: 0, left: 0 },
+  'left-bottom': { bottom: 0, left: 0 },
+  'right': { top: 0, right: 0 },
+  'top-right': { top: 0, right: 0 },
+  'right-top': { top: 0, right: 0 },
+  'bottom-right': { bottom: 0, right: 0 },
+  'right-bottom': { bottom: 0, right: 0 }
+};
+
 export default Component.extend({
   layout,
   imageUrl: '',
@@ -25,7 +40,7 @@ export default Component.extend({
     let windowRatio = windowHeight / windowWidth;
     let contentRatio = contentHeight / contentWidth;
 
-    //Maximum allowd preview width is 10% of the window width
+    //Maximum allowd preview width is 15%(fixed) of the window width
     let previewWidth = windowWidth * 0.15;
 
     //maxAllowedPreviewHeight will be windowHeight
@@ -43,6 +58,8 @@ export default Component.extend({
     let $previewContainer = this.$('#em-preview-container');
     let $preivewSelector = this.$('#em-preview-selector');
 
+    let previewPosition = availPositions[this.get('position')] || availPositions['top-right'];
+
     $previewContainer.css({
       width: previewWidth,
       height: previewHeight
@@ -51,6 +68,8 @@ export default Component.extend({
       width: previewWidth,
       height: previewSelectorHeight
     });
+    // Set preview container position
+    $previewContainer.css(previewPosition);
 
     this.setProperties({
       contentDimensions: {
@@ -69,6 +88,7 @@ export default Component.extend({
         width: previewWidth,
         height: previewSelectorHeight
       },
+      previewPosition,
       windowRatio,
       contentRatio
     });
