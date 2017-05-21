@@ -5,18 +5,18 @@ const { Component, run } = Ember;
 const html2canvas = window.html2canvas;
 
 const availPositions = {
-  'top': { top: 0, left: 0 },
-  'left': { top: 0, left: 0 },
-  'top-left': { top: 0, left: 0 },
-  'left-top': { top: 0, left: 0 },
-  'bottom': { bottom: 0, left: 0 },
-  'bottom-left': { bottom: 0, left: 0 },
-  'left-bottom': { bottom: 0, left: 0 },
-  'right': { top: 0, right: 0 },
-  'top-right': { top: 0, right: 0 },
-  'right-top': { top: 0, right: 0 },
-  'bottom-right': { bottom: 0, right: 0 },
-  'right-bottom': { bottom: 0, right: 0 }
+  'top': { top: '0px', left: '0px' },
+  'left': { top: '0px', left: '0px' },
+  'top-left': { top: '0px', left: '0px' },
+  'left-top': { top: '0px', left: '0px' },
+  'bottom': { bottom: '0px', left: '0px' },
+  'bottom-left': { bottom: '0px', left: '0px' },
+  'left-bottom': { bottom: '0px', left: '0px' },
+  'right': { top: '0px', right: '0px' },
+  'top-right': { top: '0px', right: '0px' },
+  'right-top': { top: '0px', right: '0px' },
+  'bottom-right': { bottom: '0px', right: '0px' },
+  'right-bottom': { bottom: '0px', right: '0px' }
 };
 
 export default Component.extend({
