@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-scroll-view'
+  name: 'ember-scroll-preview'
 };

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/ember-scroll-view';
+import layout from '../templates/components/ember-scroll-preview';
 
 const { Component, run } = Ember;
 const html2canvas = window.html2canvas;
