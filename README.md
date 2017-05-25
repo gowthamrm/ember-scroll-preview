@@ -7,7 +7,6 @@ This README outlines the details of collaborating on this Ember addon.
 * `git clone <repository-url>` this repository
 * `cd ember-scroll-preview`
 * `npm install`
-* `bower install`
 
 ## Running
 
