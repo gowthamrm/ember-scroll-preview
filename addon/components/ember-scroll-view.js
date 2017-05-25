@@ -98,6 +98,7 @@ export default Component.extend({
     this._super(...arguments);
     html2canvas(this.$('#scroll-view-container'), {
       onrendered: (canvas) => {
+        this.initScrollContainer();
         let imageUrl = canvas.toDataURL('image/png');
         this.set('imageUrl', imageUrl);
       }
@@ -108,7 +109,6 @@ export default Component.extend({
     this._super(...arguments);
 
     run.schedule('afterRender', () => {
-      this.initScrollContainer();
       this.bindEvents();
     });
   },
