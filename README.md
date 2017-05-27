@@ -6,6 +6,8 @@ A simple ember addon to preview the scroll progress of the page.
 
 Based on the page's scroll, the current view port position is highlighted and shown on the image of the entire page. This addon uses [html2canvas](https://www.npmjs.com/package/html2canvas) to take screenshot of the whole page once it is rendered.
 
+[DEMO](https://gowthamrm.github.io/ember-scroll-preview/)
+
 ## Installation
 ```handlebars
   ember install ember-scroll-preview
@@ -32,7 +34,7 @@ Note: Add the component in the application template to get the scroll preview fo
 
 Available positions,
 
-`top` `left` `top-left` `left-top` 
+`top` `left` `top-left` `left-top`
 
 `bottom` `bottom-left` `left-bottom`
 
@@ -41,7 +43,7 @@ Available positions,
 `bottom-right` `right-bottom`
 
 
-## Contributing
+## Collaborating on this project
 
 ### Installation
 
@@ -49,7 +51,7 @@ Available positions,
 * `cd ember-scroll-preview`
 * `npm install`
 
-### Running Addon
+### Running the dummy app
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).

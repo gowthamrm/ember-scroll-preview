@@ -1,27 +1,30 @@
 {
   "name": "ember-scroll-preview",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A simple ember addon to preview the scroll progress of the page.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "scroll",
+    "canvas",
+    "preview"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "gowthamrm",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/gowthamrm/ember-scroll-preview",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push; git checkout -"
   },
   "dependencies": {
     "ember-cli-babel": "^6.0.0",
     "ember-cli-htmlbars": "^1.1.1",
-    "ember-cli-less": "^1.5.4",
-    "html2canvas": "^0.5.0-beta4"
+    "ember-cli-less": "^1.5.4"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -42,12 +45,14 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.13.0",
+    "html2canvas": "^0.5.0-beta4",
     "loader.js": "^4.2.3"
   },
   "engines": {
     "node": ">= 4"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "https://gowthamrm.github.io/ember-scroll-preview/"
   }
 }
