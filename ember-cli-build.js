@@ -4,17 +4,19 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
-    // Add options here
+    nodeAssets: {
+      'html2canvas': {
+        vendor: {
+          srcDir: 'dist',
+          destDir: 'html2canvas',
+          include: ['html2canvas.min.js']
+        }
+      }
+    },
     snippetPaths: ['tests/dummy/snippets']
   });
-  /*
-    This build file specifies the options for the dummy test app of this
-    addon, located in `/tests/dummy`
-    This build file does *not* influence how the addon or the app using it
-    behave. You most likely want to be modifying `./index.js` or app's build file
-  */
 
-  app.import(app.nodeModulesDirectory + '/html2canvas/dist/html2canvas.min.js')
+  app.import('vendor/html2canvas/html2canvas.min.js');
 
   return app.toTree();
 };
