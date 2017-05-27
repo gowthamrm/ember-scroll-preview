@@ -1,53 +1,54 @@
-{{#ember-scroll-preview offsetTop=85}}
-  <div class="header-section">
+{{#ember-scroll-preview}}
+  <div class="demo-section">
     <div class="container">
-      <h1>Scroll Progress View Demo</h1>
-    </div>
-  </div>
-  <div class="content-section">
-    <div class="container">
-      <h2 class="title">ember-scroll-progress</h2>
-      <p>An ember addon to display the progress of the page scroll.<br> Scroll the page to view this page's progress on the bottom right.</p>
+      <div class="header-section text-center">
+        <h1>Ember Scroll Preview <small>A simple ember addon to preview the scroll progress of the page.</small></h1>
+      </div>
+      <div class="content-section">
+        <h2 class="title">Overview</h2>
+        <p>Based on the page's scroll, the current view port position is highlighted and shown on the image of the entire page. This addon uses <a href="https://www.npmjs.com/package/html2canvas" target="_blank">html2canvas</a> to take screenshot of the whole page once it is rendered.</p>
 
-      <h3>Usage:</h3>
-      {{code-snippet name="usage.hbs" class="code-snippet"}}
-      <h3>Parameters:</h3>
-      <ul>
-        <li><b>position</b> to specify the position of the scroll progress view. Available options: `top-left`, `bottom-left`, `top-right`, `bottom-right`</li>
-        <li><b>offsetTop</b> to set the top offset based on the scroll container's top position inside the page.</li>
-      </ul>
+        <h2>Installation:</h2>
+        {{code-snippet name="installation.hbs" class="code-snippet"}}
 
-      <h3>Installation:</h3>
-      <ul>
-        <li>git clone this repository</li>
-        <li>cd ember-scroll-preview</li>
-        <li>npm install</li>
-        <li>bower install</li>
-      </ul>
+        <h2>Usage:</h2>
+        {{code-snippet name="usage.hbs" class="code-snippet"}}
+        <small>Note: Add the component in the application template to get the scroll preview for all the routes accessed inside the application.</small>
 
-      <h3>Running</h3>
-      <ul>
-        <li>ember serve</li>
-        <li>Visit your app at <a href="http://localhost:4200">http://localhost:4200</a>.</li>
-      </ul>
+        <h2>Parameters:</h2>
+        <ul>
+          <li><b>offsetTop</b> to set the top offset based on the scroll container's top position inside the page.</li>
+          <li>
+            <b>position</b> to specify the position of the scroll preview container.<br>
+            Available positions,
+            <ul>
+              <li> top / left / top-left / left-top </li>
+              <li> bottom / bottom-left / left-bottom </li>
+              <li> right / top-right / right-top </li>
+              <li> bottom-right / right-bottom </li>
+            </ul>
+          </li>
+        </ul>
 
-      <h3>Running Tests</h3>
-      <ul>
-        <li>npm test (Runs `ember try:each` to test your addon against multiple Ember versions)</li>
-        <li>ember test</li>
-        <li>ember test --server</li>
-      </ul>
+        <h2>Collaborating on this project</h2>
 
-      <h3>Building</h3>
-      <ul>
-        <li>ember build</li>
-      </ul>
+        <h3>Installation</h3>
+        {{code-snippet name="installation.sh" class="code-snippet"}}
 
-    </div>
-  </div>
-  <div class="footer-section">
-    <div class="container">
-      <p>Developed by <a href="https://github.com/gowthamrm">@gowthamrm</a></p>
+        <h3>Running the dummy app</h3>
+        {{code-snippet name="running.sh" class="code-snippet"}}
+        <small>Visit your app at <a href="http://localhost:4200">http://localhost:4200</a></small>
+
+        <h3>Running Tests</h3>
+        {{code-snippet name="tests.sh" class="code-snippet"}}
+
+        <h3>Building</h3>
+        {{code-snippet name="build.sh" class="code-snippet"}}
+
+      </div>
+      <div class="footer-section">
+        <p>Developed by <a href="https://github.com/gowthamrm">@gowthamrm</a></p>
+      </div>
     </div>
   </div>
 {{/ember-scroll-preview}}
