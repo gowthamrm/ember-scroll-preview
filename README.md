@@ -1,5 +1,9 @@
 # ember-scroll-preview
 
+[![npm version](https://badge.fury.io/js/ember-scroll-preview.svg)](https://badge.fury.io/js/ember-scroll-preview)
+[![Build Status](https://travis-ci.org/gowthamrm/ember-scroll-preview.svg?branch=master)](https://travis-ci.org/gowthamrm/ember-scroll-preview)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-scroll-preview.svg)](https://emberobserver.com/addons/ember-scroll-preview)
+
 A simple ember addon to preview the scroll progress of the page.
 
 ## Overview
