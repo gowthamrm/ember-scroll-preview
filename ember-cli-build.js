@@ -13,7 +13,10 @@ module.exports = function(defaults) {
         }
       }
     },
-    snippetPaths: ['tests/dummy/snippets']
+    snippetPaths: ['tests/dummy/snippets'],
+    'ember-cli-babel': {
+      includePolyfill: true
+    }
   });
 
   app.import('vendor/html2canvas/html2canvas.min.js');

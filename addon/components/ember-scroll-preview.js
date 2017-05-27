@@ -26,7 +26,7 @@ export default Component.extend({
   scrollCounter: 0,
 
   initScrollContainer() {
-    let $scrollContainer = this.$('#scroll-view-container');
+    let $scrollContainer = this.$('#em-scroll-view-container');
     let $windowContainer = this.$(window);
 
     let contentWidth = $scrollContainer && $scrollContainer.width() || 0;
@@ -96,9 +96,9 @@ export default Component.extend({
 
   didRender() {
     this._super(...arguments);
-    html2canvas(this.$('#scroll-view-container'), {
+    this.initScrollContainer();
+    html2canvas(this.$('#em-scroll-view-container'), {
       onrendered: (canvas) => {
-        this.initScrollContainer();
         let imageUrl = canvas.toDataURL('image/png');
         this.set('imageUrl', imageUrl);
       }
@@ -147,7 +147,7 @@ export default Component.extend({
   },
 
   setScrollSelector() {
-    let content = this.$('#scroll-view-container');
+    let content = this.$('#em-scroll-view-container');
 
     let contentHeight = content && content.height();
     let previewHeight = this.get('previewDimensions.height');
