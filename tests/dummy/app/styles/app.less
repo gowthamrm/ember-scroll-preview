@@ -33,7 +33,7 @@ p {
 }
 
 .header-section {
-  padding: 15vh 20px;
+  padding: 10vh 20px;
   h1 {
     color: #fff;
     font-size: 50px;
@@ -44,6 +44,23 @@ p {
       display: block;
     }
   }
+  .gh-section {
+    margin-top: 50px;
+  }
+  .btn-gh {
+    padding: 10px;
+    border: 1px solid #fdfdfd;
+    color: #fdfdfd;
+    font-size: 12px;
+    border-radius: 2px;
+    &:hover {
+      opacity: 0.5;
+    }
+    img {
+      vertical-align: text-bottom;
+      width: 16px;
+    }
+  }
 }
 
 .content-section {
@@ -51,6 +68,7 @@ p {
   color: #636363;
   padding: 50px;
   border-radius: 10px;
+  margin-bottom: 40px;
   .title {
     margin-top: 0;
   }
@@ -78,14 +96,20 @@ p {
 }
 
 .footer-section {
-  padding: 1px 15px;
+  padding: 10px 15px;
   text-align: center;
-  color: #fff;
-  p {
-    font-size: 13px;
-  }
+  font-size: 12px;
   a {
-    color: #dfd;
+    opacity: 0.7;
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+      opacity: 1;
+    }
+    img {
+      margin: 0 2px;
+      width: 16px;
+    }
   }
 }
 
