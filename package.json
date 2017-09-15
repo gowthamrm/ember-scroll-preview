@@ -1,6 +1,6 @@
 {
   "name": "ember-scroll-preview",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A simple ember addon to preview the scroll progress of the page.",
   "keywords": [
     "ember-addon",
