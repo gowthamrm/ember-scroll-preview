@@ -1,7 +1,7 @@
-import Ember from 'ember';
 import layout from '../templates/components/ember-scroll-preview';
+import Component from '@ember/component';
+import { run } from '@ember/runloop';
 
-const { Component, run } = Ember;
 const html2canvas = window.html2canvas;
 
 const availPositions = {
